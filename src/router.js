@@ -15,6 +15,8 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import PlaceGoToDrawer from '../components/PlaceGoToDrawer'
+import PlaceGoHome from '../components/PlaceGoHome'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake IOS 878787for dev menu',
@@ -74,6 +76,8 @@ class HomeScreen extends React.Component {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Home!</Text>
+        <PlaceGoToDrawer/>
+        <PlaceGoHome/>
       </View>
     );
   }

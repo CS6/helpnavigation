@@ -2,15 +2,14 @@ import React from 'react';
 import { Button } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
-class PlaceGoHome extends React.Component {
+class PlaceGoToTab extends React.Component {
   render() {
     return (
       <Button
-        title="PlaceGoHome"
+        title="PlaceGoToTab"
         onPress={() => {
         //   this.props.navigation.goBack();
-          this.props.navigation.navigate('HomeScreen');
-                //   this.props.navigation.pop();
+          this.props.navigation.navigate('BottomTabScreen');
         }}
       />
     );
@@ -18,4 +17,4 @@ class PlaceGoHome extends React.Component {
 }
 // withNavigation returns a component that wraps MyBackButton and passes in the
 // navigation prop
-export default withNavigation(PlaceGoHome);
+export default withNavigation(PlaceGoToTab);

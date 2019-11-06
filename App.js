@@ -160,7 +160,7 @@ class DetailsScreen extends React.Component {
 // };
 
 const AppSwitchNavigator = createSwitchNavigator({
-  Home: {
+  HomeScreen: {
     screen: DetailsScreen,
 
     // navigationOptions: {
@@ -193,7 +193,6 @@ const AppSwitchNavigator = createSwitchNavigator({
       headerTitle: '我是有Header的DrawerScreenTitle',
     },
   },
-  
   IndexScreen: {
     screen: createStackNavigator({
       index: {

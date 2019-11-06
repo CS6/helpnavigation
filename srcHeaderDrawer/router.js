@@ -15,7 +15,9 @@ import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import PlaceGoToTab from '../components/PlaceGoToTab'
 import PlaceGoHome from '../components/PlaceGoHome'
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake IOS 878787for dev menu',
   android:
@@ -113,6 +115,7 @@ class HomeScreen extends React.Component {
           <Text>Open Drawer</Text>
         </TouchableOpacity>
         <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Home</Text>
+        <PlaceGoToTab/>
         <PlaceGoHome/>
       </View>
     );
