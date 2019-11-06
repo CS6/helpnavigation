@@ -15,7 +15,7 @@ import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
+import PlaceGoHome from '../components/PlaceGoHome'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake IOS 878787for dev menu',
   android:
@@ -47,33 +47,14 @@ class NavigationDrawerStructure extends Component {
     );
   }
 }
-export class OpenDrawerBtn extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      value: null,
-    };
-    this.termId = 100;
-  }
-  render() {
-    return (
-      <View>
-        <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-          <Text>Open Drawer</Text>
-        </TouchableOpacity>
 
-        {/* <OtherComponent navigation = {this.props.navigation}/> */}
-      </View>
-    );
-  }
-}
 class DrawerScreen extends Component<Props> {
   // export default class DrawerScreen extends Component<Props> {
   static navigationOptions = {
     // headerTitle instead of title
     // headerTitle: <Top />,
     title: 'Drawer',
-    // headerTitle: 'AAA我是不該出現的 headerTitleAAA',
+    // headerTitle: 'AAA我是不該出現的 headerDrawerScreenTitleAAA',
 
     // drawerLabel: 'Home',
     // drawerIcon: ({ tintColor }) => (
@@ -132,6 +113,7 @@ class HomeScreen extends React.Component {
           <Text>Open Drawer</Text>
         </TouchableOpacity>
         <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Home</Text>
+        <PlaceGoHome/>
       </View>
     );
   }
